@@ -85,26 +85,6 @@ Promise的状态一单改变，将不可修改
 
 Promise是异步编程的一种解决方案，它有三种状态，分别是pending-进行中、resolved-已完成、rejected-已失败
 当Promise的状态由pending转变为resolved或rejected时，会执行相应的方法，并且状态一旦改变，就无法再次改变状态
-声明一个promise对象时
-.then()方法使Promise原型链上的方法，它包含两个参数方法，分别是已成功resolved的回调和已失败rejected的回调
-
-.catch()的作用是捕获Promise的错误，与then()的rejected回调作用几乎一致。但是由于Promise的抛错具有冒泡性质，能够不断传递，这样就能够在下一个catch()中统一处理这些错误。同时catch()也能够捕获then()中抛出的错误，所以建议不要使用then()的rejected回调，而是统一使用catch()来处理
-同样，catch()中也可以抛出错误，由于抛出的错误会在下一个catch中被捕获处理，因此可以再添加catch()
-
-       7 es6 的继承
-主要是class继承
-和其他面向对象语言一样，class用extends实现继承。
-(1)子类没constructor时
-     子类American继承父类Person，子类没用定义constrcutor,则默认添加一个，并且在constrcutor中调用super函数,相当于调用父类的构造函数。调     用super函数是为了在子类中获得父类的this，调用之后this指向子类。也就是父类.prototype.constructor.call(this).
-(2)子类有constructor
-     子类必须在constructor方法中调用super方法，否则new实例时会报错。因为子类没有自己的this对象，而是继承父类的this对象。如果不调用super函数，子类就得不到this对象。super()作为父类的构造函数，只能出现在子类的constructor()中；但是super指向父类的原型对象，可以调用父类的属性和方法
-
-       8 es6 还有哪些拓展
-let和const
-1.    let不像var那样，会发生“变量提升”现象。
-2.    所声明的变量，只在let命令所在的代码块内有效。
-3.    let声明的变量不会挂到在window上。
-4.    let不能重复声明。
 
 const
 1.   一旦声明，常量的值不能改变  通常大写声明
